@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elocity's Homepage</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script src="https://kallistero.neocities.org/things/i/made/scripts/kallistero_script_loader.js"></script>
+</head>
+
+<body>
+    <header class="center">
+        <img src="img/title.gif" alt="Elocity's Homepage" class="title"></img><br/>
+        <img src="img/dividers/blue_flashy.gif" alt="Divider">
+    </header>
+
+    <script>
+        KALLISTERO_SCRIPT.run('gridlines', () => {
+            const parentElement = document.createElement('div');
+            parentElement.id = 'bg-lines';
+            parentElement.style.position = 'absolute';
+            parentElement.style.left = '0px';
+            parentElement.style.top = '0px';
+            parentElement.style.width = '1920px';
+            parentElement.style.height = '927px';
+
+            document.appendChild(parentElement);
+            
+            const config = wireframeGridlines(
+                parentElement, // parent element 
+                'effect-maker-version-000', // effect version (for dev to keep later versions of the effect backwards compatible) 
+                '', // id for this instance of this effect 
+                'absolute', // CSS position type for this effect
+                100, // width of the effect within its parent 
+                100, // height of the effect within its parent 
+                '%', // units of measurement for the above 2 
+                'hidden', // CSS overflow type for this effect
+                '#2789b9', // wire color 
+                5, // line thickness in px
+                2, // number of vertical lines on the back wall
+                4, // number of horizontal lines on the back wall
+                4, // amount of concentric lines; behaves differently depending on whether forced perspective is on
+                40, // CSS left property of the back wall
+                0, // CSS top property of the back wall
+                '%', // units of measurement for the above 2
+                20, // width of the back wall
+                100, // height of the back wall
+                '%', // units of measurement for the above 2
+                false, // whether to display grid lines on the back wall
+                true, // whether to display the grid lines radiating from the back wall
+                true, // whether to display the grid lines that are parallel to the back wall
+                '#466d86', // the glow color for the lines
+                1.6, // the blur amount for the lines' glow
+                1, // the spread amount for the lines' glow
+                true, // z-flow - whether concentric lines experience a flowing animation, to or away from the back wall
+                -1.1, // the z-flow animation speed 
+                48, // the framerate for the z-flow animation (in frames per second)
+                false, // whether forced perspective is on; forces the corners of the back wall to connect to the corners of the whole effect
+                false, // whether there's a natural vanishing point behind the back wall, for when forced perspective is off
+                50.4, // vanishing point's position from the left
+                50, // vanishing point's position from the top
+                '%', // units of measurement for the above 2
+                'none', // CSS pointer-events property 
+                -1 // Z-index 
+            );
+        });
+    </script>
+</body>
+
+</html>

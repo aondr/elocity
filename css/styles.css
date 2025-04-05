@@ -1,0 +1,14 @@
+body {
+    /* background-image: url('../img/backgrounds/1.gif'); */
+    color: white;
+}
+
+.center {
+    text-align: center;
+}
+
+.title {
+    font-weight: bold;
+    text-align: center;
+    margin-top: 1rem;
+}
