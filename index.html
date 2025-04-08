@@ -7,6 +7,9 @@
     <title>Elocity's Homepage</title>
 
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/music.css">
+    <link rel="stylesheet" href="css/marquee.css">
+
     <script src="https://kallistero.neocities.org/things/i/made/scripts/kallistero_script_loader.js"></script>
 </head>
 
@@ -202,12 +205,28 @@
             </div>
             <aside class="secondary-content">
                 <section>
-                    <h2>My playlist</h2>
+                    <h2 class="center">My playlist</h2>
                     <iframe style="border-radius:12px"
                         src="https://open.spotify.com/embed/playlist/1GgOagaGkYh3YZqRTgo6Vu?utm_source=generator&theme=0"
                         width="100%" height="352" frameBorder="0" allowfullscreen=""
                         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                         loading="lazy"></iframe>
+                    
+                    <img src="img/dividers/royal.gif" alt="Divider">
+
+                    <h2 class="center">I'm currently listening to</h2>
+                    <section class="side-content-elevated now-playing" id="nowPlaying">
+                        <img src="img/gifs/protogen_spin.gif" alt="Lalalala" class="cover" id="nowPlayingCover" />
+                        <div class="details">
+                            <div class="marquee-container"><p class="title" id="nowPlayingTitle">Loading...</p></div>
+                            <div class="marquee-container"><p class="artist" id="nowPlayingArtist">Gimme a bit :3</p></div>
+                            <div class="progress">
+                                <span id="nowPlayingCurrent">4:21</span>
+                                <progress class="bar" max="100" value="67.5" id="nowPlayingProgress"></progress>
+                                <span id="nowPlayingDuration">6:27</span>
+                            </div>
+                        </div>
+                    </section>
                 </section>
             </aside>
         </div>
@@ -215,6 +234,7 @@
 
     <script src="scripts/scrolling-text.js"></script>
     <script src="scripts/status.js"></script>
+    <script src="scripts/music.js"></script>
     <script>
         KALLISTERO_SCRIPT.run('gridlines', () => {
             const parentElement = document.getElementsByTagName('body')[0];

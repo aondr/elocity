@@ -1,0 +1,47 @@
+.now-playing {
+    display: flex;
+    gap: 0.5rem;
+    width: 98%;
+    max-width: 98%;
+    overflow: hidden;
+}
+
+.now-playing .cover {
+    width: 96px;
+    height: 96px;
+    z-index: 10;
+    margin: -0.25rem;
+}
+
+.now-playing .details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* width: ; */
+}
+
+.now-playing .details .title {
+    font-weight: bold;
+    font-size: 28px;
+    width: max-content;
+    z-index: 1;
+}
+
+.now-playing .details .artist {
+    color: gray;
+    font-size: 18px;
+    width: max-content;
+}
+
+.now-playing .details .progress {
+    display: flex;
+    align-content: center;
+    height: max-content;
+    gap: 0.25rem;
+}
+
+.now-playing .details .progress .bar {
+    height: 4px;
+    margin-top: auto;
+    margin-bottom: auto;
+}

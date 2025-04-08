@@ -165,14 +165,12 @@ body {
 
 .secondary-content section {
   padding: 0.25rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
 }
 
 .under-construction-divider {
   width: 70%;
   text-align: center;
-  padding: 0.5rem;
+  margin-top: 1rem;
 }
 
 .center {
@@ -186,7 +184,8 @@ h4,
 h5,
 h6 {
   font-family: Daydream, system-ui;
-  margin-bottom: 0.25rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 h1 {
@@ -210,6 +209,9 @@ h4 {
   padding: 0.5rem;
   border: #3041FF solid 2px;
   margin-bottom: 1rem;
+
+  margin-left: auto;
+  margin-right: auto;
 
   max-height: 256px;
   overflow-y: auto;

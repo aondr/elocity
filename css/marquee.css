@@ -1,0 +1,27 @@
+.marquee-container {
+    width: 100%; /* or your desired width */
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.marquee-active {
+    display: inline-block;
+    padding-left: 0;
+    animation: marquee 15s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    10% {
+        transform: translateX(0); /* pause at start for 10% of duration */
+    }
+    99.99999999999% {
+        transform: translateX(-100%); /* scroll to end */
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
