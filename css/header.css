@@ -1,0 +1,66 @@
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: max-content;
+
+    width: 100%;
+    margin-top: 0.5rem;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header-banner {
+    width: 800px;
+    height: 64px;
+
+    background-image: url("../img/grids/blue_title_grid.png");
+    background-size: cover;
+    background-position: center;
+
+    border: #3041ff solid 2px;
+}
+
+.main-navbar {
+    width: 800px;
+
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+
+    background-image: url("../img/grids/blue_row.png");
+    background-size: cover;
+    background-position: center;
+
+    border: #3041ff solid 2px;
+
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 32px;
+
+    color: #3041ff;
+}
+
+.main-navbar a {
+    text-decoration: none;
+    color: #3041ff;
+    font-weight: bold;
+}
+
+.main-navbar a:hover {
+    text-decoration: underline;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.nav-icon {
+    height: 32px;
+}

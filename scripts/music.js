@@ -1,4 +1,5 @@
-const SPOTIFY_API_URL = "https://elocity-api.tadam.space/spotify_api/now_playing";
+const SPOTIFY_API_URL =
+    "https://elocity-api.tadam.space/spotify_api/now_playing";
 // const SPOTIFY_API_URL = "http://localhost:8000/spotify_api/now_playing";
 
 const container = document.getElementById("nowPlaying");
@@ -13,20 +14,29 @@ const current = document.getElementById("nowPlayingCurrent");
 const progress = document.getElementById("nowPlayingProgress");
 const duration = document.getElementById("nowPlayingDuration");
 
-let last_is_error = false;
-let last_is_playing = false;
-let last_title = "";
-let last_artist = "";
-
 function marquee_title() {
     if (title.offsetWidth > max_width) {
-        title.classList.add("marquee-active");
+        if (!title.classList.contains("marquee-active")) {
+            title.classList.add("marquee-active");
+        }
+    } else {
+        if (title.classList.contains("marquee-active")) {
+            title.classList.remove("marquee-active");
+        }
     }
 }
 
 function marquee_artist() {
-    if (artist.offsetWidth > max_width) {
-        artist.classList.add("marquee-active");
+    if (
+        artist.offsetWidth > max_width
+    ) {
+        if (!artist.classList.contains("marquee-active")) {
+            artist.classList.add("marquee-active");
+        }
+    } else {
+        if (artist.classList.contains("marquee-active")) {
+            artist.classList.remove("marquee-active");
+        }
     }
 }
 
@@ -39,12 +49,9 @@ window.addEventListener("DOMContentLoaded", () => {
                     artist.innerHTML =
                         "Check the console for an error and report it to me please!";
 
-                    if (!last_is_error) {
-                        marquee_title();
-                        marquee_artist();
-                    }
+                    marquee_title();
+                    marquee_artist();
 
-                    last_is_error = true;
                     return;
                 }
 
@@ -54,29 +61,16 @@ window.addEventListener("DOMContentLoaded", () => {
                         artist.innerHTML =
                             "Feel free to check out my playlist though!";
 
-                        if (json.is_playing != last_is_playing) {
-                            marquee_title();
-                            marquee_artist();
-                        }
-
-                        last_is_playing = false;
-                        last_is_error = false;
+                        marquee_title();
+                        marquee_artist();
                         return;
                     }
-                    last_is_playing = true;
-                    last_is_error = false;
 
                     title.innerHTML = json.title;
-                    if (json.title != last_title) {
-                        marquee_title();
-                    }
-                    last_title = json.title;
-
                     artist.innerHTML = json.artist;
-                    if (json.artist != last_artist) {
-                        marquee_artist();
-                    }
-                    last_artist = json.artist;
+
+                    marquee_artist();
+                    marquee_title();
 
                     cover.setAttribute("src", json.album_cover);
 
@@ -90,12 +84,9 @@ window.addEventListener("DOMContentLoaded", () => {
                 artist.innerHTML =
                     "Check the console for an error and report it to me please!";
 
-                if (!last_is_error) {
-                    marquee_title();
-                    marquee_artist();
-                }
+                marquee_title();
+                marquee_artist();
 
-                last_is_error = true;
                 return;
             });
     }, 1000);
