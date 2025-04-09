@@ -1,124 +1,131 @@
 @font-face {
-  font-family: Algol;
-  src: url('../fonts/Algol.ttf');
+    font-family: Algol;
+    src: url("../fonts/Algol.ttf");
 }
 
 @font-face {
-  font-family: Daydream;
-  src: url('../fonts/Daydream.ttf');
+    font-family: Daydream;
+    src: url("../fonts/Daydream.ttf");
+}
+
+.particle {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    pointer-events: none;
 }
 
 * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 
-  font-family: Algol, system-ui;
-  font-size: 20px;
-  /* font-weight: 400;
+    font-family: Algol, system-ui;
+    font-size: 20px;
+    /* font-weight: 400;
   font-style: normal; */
+
+    cursor: url("../img/cursors/blahaj.png"), auto;
 }
 
 body {
-  background-image: url("../img/backgrounds/1.gif");
-  color: white;
-  background-attachment: fixed;
-  /* overflow: hidden; */
-  height: 100vh;
-  overflow-y: auto;
+    background-image: url("../img/backgrounds/2.gif");
+    color: white;
+    background-attachment: fixed;
+    /* overflow: hidden; */
+    height: 100vh;
+    overflow-y: auto;
 }
 
 .content-container {
-  margin-left: auto;
-  margin-right: auto;
-  width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content;
 }
 
 aside {
-  width: 400px;
-  height: max-content;
+    width: 400px;
+    height: max-content;
 }
 
 .left {
-  float: left;
-  margin-right: 0.5rem;
+    float: left;
+    margin-right: 0.5rem;
 }
 
 .right {
-  float: right;
-  margin-left: 0.5rem;
+    float: right;
+    margin-left: 0.5rem;
 }
 
 .content-background {
-  position: relative;
+    position: relative;
 
-  background-image: url('../img/grids/blue_row.png');
-  background-size: contain;
-  background-position: center;
-  background-repeat: repeat-y;
+    background-image: url("../img/grids/pink_row.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: repeat-y;
 
-  border: #3041FF solid 2px;
+    border: #ff66cc solid 2px;
 
-  z-index: 0;
-  overflow: hidden;
-  width: 800px;
-  min-width: 800px;
-  word-wrap: break-word;
-  word-break: break-all;
+    z-index: 0;
+    overflow: hidden;
+    width: 800px;
+    min-width: 800px;
+    word-wrap: break-word;
 }
 
 .content {
-  padding: 1rem;
-  word-wrap: break-word;
-  word-break: break-all;
+    padding: 1rem;
+    word-wrap: break-word;
 }
 
 .scrolling-text-container {
-  width: 800px;
-  overflow: hidden;
-  white-space: nowrap;
-  position: relative;
-  height: 32px;
+    width: 800px;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    height: 32px;
 
-  background-image: url('../img/grids/blue_row.png');
-  background-size: cover;
-  background-position: center;
+    background-image: url("../img/grids/pink_row.png");
+    background-size: cover;
+    background-position: center;
 
-  border: #3041FF solid 2px;
-  margin-top: 0.5rem;
+    border: #ff66cc solid 2px;
+    margin-top: 0.5rem;
 
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .secondary-content {
-  background-image: url('../img/grids/blue_row.png');
-  background-size: contain;
-  background-position: center;
-  background-repeat: repeat-y;
+    background-image: url("../img/grids/pink_row.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: repeat-y;
 
-  border: #3041FF solid 2px;
+    border: #ff66cc solid 2px;
 
-  padding-left:1rem;
-  padding-right: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 
-  width: 400px;
-  max-width: 400px;
-  overflow: hidden;
+    width: 400px;
+    max-width: 400px;
+    overflow: hidden;
 }
 
 .secondary-content section {
-  padding: 0.25rem;
-  padding-bottom: 0.2rem;
+    padding: 0.25rem;
+    padding-bottom: 0.2rem;
 }
 
 .under-construction-divider {
-  width: 70%;
-  text-align: center;
-  margin-top: 1rem;
+    width: 70%;
+    text-align: center;
+    margin-top: 1rem;
 }
 
 .center {
-  text-align: center;
+    text-align: center;
 }
 
 h1,
@@ -127,57 +134,112 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Daydream, system-ui;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+    font-family: Daydream, system-ui;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 h1 {
-  font-size: 32px;
+    font-size: 32px;
 }
 
 h2 {
-  font-size: 24px;
+    font-size: 24px;
 }
 
 h3 {
-  font-size: 16px;
+    font-size: 16px;
 }
 
 h4 {
-  font-size: 10px;
+    font-size: 10px;
 }
 
 .side-content-elevated {
-  background-color: rgba(0, 0, 0, 0.5);
-  /* padding: 0.5rem; */
-  border: #3041FF solid 2px;
-  margin-bottom: 1rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* padding: 0.5rem; */
+    border: #ff66cc solid 2px;
+    margin-bottom: 1rem;
 
-  margin-left: auto;
-  margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
 
-  max-height: 256px;
-  overflow-y: auto;
+    max-height: 512px;
+    overflow-y: auto;
+
+    padding: 0;
 }
 
 .side-content-elevated-padding {
-  padding: 0.5rem;
+    padding: 0.5rem;
 }
 
 a {
-  color: #3041FF;
-  text-decoration: none;
+    color: #ff66cc;
+    text-decoration: none;
 }
 
 a:hover {
-  color: #3041FF;
-  text-decoration: underline;
+    color: #ff66cc;
+    text-decoration: underline;
 }
 
 .version {
-  text-align: center;
-  font-size: 18px;
-  color: gray;
-  /* margin-bottom: 1rem; */
+    text-align: center;
+    font-size: 18px;
+    color: gray;
+    /* margin-bottom: 1rem; */
+}
+
+.news {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.news > div > hr {
+    margin-top: 1rem;
+}
+
+.todo {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.news_and_todo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0.5rem;
+    grid-row-gap: 0px;
+
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+ul {
+    margin-left: 1rem;
+}
+
+ul li {
+    list-style-type: disc;
+}
+
+.introduction {
+    margin: 0.5rem;
+}
+
+.introduction-avatar {
+    max-height: 180px;
+}
+
+.introduction-text {
+    padding-top: 0.5rem;
+}
+
+.visitors-label {
+    font-size: 24px;
+}
+
+.visitors-counter {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1rem;
 }
