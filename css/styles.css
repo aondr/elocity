@@ -8,13 +8,6 @@
     src: url("../fonts/Daydream.ttf");
 }
 
-.particle {
-    position: absolute;
-    width: 3px;
-    height: 3px;
-    pointer-events: none;
-}
-
 * {
     margin: 0;
     padding: 0;

@@ -20,13 +20,6 @@
     cursor: url("../img/cursors/blahaj.png"), auto;
 }
 
-.particle {
-    position: absolute;
-    width: 3px;
-    height: 3px;
-    pointer-events: none;
-}
-
 body {
     background-image: url("../img/backgrounds/2.gif");
     color: white;
@@ -38,6 +31,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    position: relative;
 }
 
 .container {
@@ -54,7 +49,23 @@ body {
     height: max-content;
 
     padding: 1rem;
+
+    position: relative;
 }
+
+/* .welcome_container::before {
+    content: "";
+    position: absolute;
+    top: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 200px;
+    width: 200px;
+    background-image: url("../img/me/halfbody.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 1;
+} */
 
 .center {
     text-align: center;
@@ -109,4 +120,22 @@ h4 {
     width: max-content;
     margin-left: auto;
     margin-right: auto;
+}
+
+.welcome_title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.welcome_button {
+    font-family: Daydream, system-ui;
+    color: #FF66CC;
+    border-bottom: 2px solid #FF66CC;
+    display: flex;
+    align-items: end;
+    width: max-content;
+    margin-left: auto;
+    margin-top: 1rem;
 }

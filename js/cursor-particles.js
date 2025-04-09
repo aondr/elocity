@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
+    const container = document.getElementById("particle-container");
     let mouseX = 0;
     let mouseY = 0;
 
     document.addEventListener("mousemove", (e) => {
-        mouseX = e.pageX;
-        mouseY = e.pageY;
-
+        mouseX = e.clientX;
+        mouseY = e.clientY;
         createParticles();
     });
 
@@ -20,17 +20,16 @@ document.addEventListener("DOMContentLoaded", () => {
             const pinkShade2 = Math.floor(Math.random() * 100) + 100;
             particle.style.backgroundColor = `rgb(${pinkShade}, ${pinkShade2}, ${pinkShade})`;
 
-            const size = Math.random() * 2 + 2;
+            const size = Math.random() * 4 + 2;
             particle.style.width = `${size}px`;
             particle.style.height = `${size}px`;
 
-            const offsetX = (Math.random() - 0.5) * 20;
-            const offsetY = (Math.random() - 0.5) * 20;
+            const offsetX = (Math.random() - 0.5) * 10;
+            const offsetY = (Math.random() - 0.5) * 10;
             particle.style.left = `${mouseX + offsetX}px`;
             particle.style.top = `${mouseY + offsetY}px`;
 
-            document.body.appendChild(particle);
-
+            container.appendChild(particle);
             animateParticle(particle);
         }
     }
@@ -51,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
             particle.style.opacity = opacity;
             particle.style.transform = `rotate(${rotation}deg)`;
 
-            if (opacity <= 0) {
+            if (opacity <= 0 || posY > window.innerHeight) {
                 clearInterval(animation);
                 particle.remove();
             }
