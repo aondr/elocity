@@ -53,19 +53,33 @@ body {
     position: relative;
 }
 
-/* .welcome_container::before {
+.container::before {
     content: "";
     position: absolute;
-    top: -200px;
+    top: -110px;
     left: 50%;
     transform: translateX(-50%);
-    height: 200px;
-    width: 200px;
-    background-image: url("../img/me/halfbody.png");
+    height: 128px;
+    width: 128px;
+    background-image: url("../img/me/peek-top.png");
     background-size: contain;
     background-repeat: no-repeat;
     z-index: 1;
-} */
+}
+
+.welcome_container::before {
+    content: "";
+    position: absolute;
+    top: -110px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 128px;
+    width: 128px;
+    background-image: url("../img/me/peek-top.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
 
 .center {
     text-align: center;
