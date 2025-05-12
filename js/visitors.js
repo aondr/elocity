@@ -1,5 +1,5 @@
 const ELOCITY_API_URI =
-    "https://elocity-api.tadam.space";
+    "https://api.elocity.site";
 // const ELOCITY_API_URI = "http://localhost:8000";
 
 window.addEventListener("DOMContentLoaded", () => {
