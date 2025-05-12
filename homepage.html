@@ -405,8 +405,12 @@
                             <input type="checkbox" disabled />
                             <span>Add the Contact page</span><br />
 
-                            <input type="checkbox" disabled />
-                            <span>Make a guestbook</span><br />
+                            <input
+                                type="checkbox"
+                                onchange="this.checked = !this.checked"
+                                checked
+                            />
+                            <span><del>Make a guestbook</del></span><br />
 
                             <input
                                 type="checkbox"
