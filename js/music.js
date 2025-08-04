@@ -1,5 +1,5 @@
 const SPOTIFY_API_URL =
-    "https://api.elocity.site/spotify_api/now_playing";
+    "https://mpwapi.toaster.gay/spotify_api/now_playing";
 // const SPOTIFY_API_URL = "http://localhost:8000/spotify_api/now_playing";
 
 const container = document.getElementById("nowPlaying");

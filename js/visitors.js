@@ -1,5 +1,5 @@
 const ELOCITY_API_URI =
-    "https://api.elocity.site";
+    "https://mpwapi.toaster.gay";
 // const ELOCITY_API_URI = "http://localhost:8000";
 
 window.addEventListener("DOMContentLoaded", () => {
